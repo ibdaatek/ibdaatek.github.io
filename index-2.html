@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الإبداع الهندسي للمقاولات | حلب</title>
+<meta name="description" content="شركة الإبداع الهندسي للمقاولات في حلب: إنشاءات، مقاولات، إكساء وتشطيبات فاخرة، جبس بورد ونجارة. منذ 1989.">
+<style>
+:root{
+ --gold:#c9a24b;--gold2:#e6c878;--bg:#0a0a0a;--bg2:#111;--card:#151515;--line:#2a2418;--text:#eee;--mut:#a8a08c;
+ --img-logo:url(1-logo.png);
+ --img-hero:url(2-hero.jpg);
+ --img-before:url(3-before.jpg);
+ --img-after:url(4-after.jpg);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Tahoma,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.9}
+.wrap{max-width:1050px;margin:auto;padding:0 18px}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:bold;color:var(--gold2);font-size:16px}
+.brand i{width:40px;height:40px;background:var(--img-logo) center/contain no-repeat;display:block}
+nav{display:flex;gap:18px;font-size:14px;color:var(--mut)}
+nav a:hover{color:var(--gold2)}
+@media(max-width:700px){nav{display:none}}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:bold;font-size:15px;border:1.5px solid var(--gold);cursor:pointer}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111;border-color:transparent}
+.btn-line{color:var(--gold2)}
+.btn-sm{padding:8px 14px;font-size:13px;white-space:nowrap}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;text-align:center;
+ background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.88)),var(--img-hero) center/cover no-repeat}
+.hero .logo{width:130px;height:130px;margin:0 auto 18px;background:var(--img-logo) center/contain no-repeat}
+.hero small{color:var(--gold);letter-spacing:1px}
+.hero h1{font-size:clamp(30px,6vw,50px);line-height:1.5;margin:6px 0 10px;color:#fff}
+.hero h1 b{color:var(--gold2)}
+.hero p{max-width:620px;margin:0 auto 26px;color:#d8d2c2;font-size:17px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-40px;position:relative;z-index:2}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;text-align:center;padding:16px 6px}
+.stat b{display:block;font-size:24px;color:var(--gold2)}
+.stat span{font-size:13px;color:var(--mut)}
+section{padding:64px 0}
+.tag{color:var(--gold);font-size:13px;letter-spacing:1px}
+h2{font-size:28px;color:#fff;margin:2px 0 8px}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--gold);margin-top:10px;border-radius:2px}
+.sub{color:var(--mut);margin-bottom:28px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.25s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card .n{font-size:13px;color:var(--gold);letter-spacing:2px}
+.card h3{color:var(--gold2);font-size:19px;margin:6px 0}
+.card p{color:#cfc8b6;font-size:15px}
+.about{display:grid;grid-template-columns:1fr;gap:22px}
+.about p{color:#d8d2c2;font-size:16.5px}
+.alt{background:var(--bg2)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.gal div{aspect-ratio:4/3;border-radius:12px;background-size:cover;background-position:center;border:1px solid var(--line)}
+.note{font-size:12.5px;color:var(--mut);margin-top:12px}
+.ba{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid var(--line);user-select:none;touch-action:pan-y}
+.ba .a,.ba .b{position:absolute;inset:0;background-size:cover;background-position:center}
+.ba .a{background-image:var(--img-after)}
+.ba .b{background-image:var(--img-before);clip-path:inset(0 0 0 50%)}
+.ba .lbl{position:absolute;top:12px;background:rgba(0,0,0,.7);color:var(--gold2);padding:2px 14px;border-radius:6px;font-size:14px;z-index:3}
+.ba .l1{right:12px}.ba .l2{left:12px}
+.ba .bar{position:absolute;top:0;bottom:0;width:3px;background:var(--gold2);left:50%;z-index:2;pointer-events:none}
+.ba .bar::after{content:"⇄";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:var(--gold2);color:#111;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;direction:ltr}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.why div{border-right:3px solid var(--gold);background:var(--card);padding:16px 18px;border-radius:10px}
+.why b{color:var(--gold2);display:block}
+.why span{color:#cfc8b6;font-size:14.5px}
+.map iframe{width:100%;height:300px;border:0;border-radius:14px;filter:grayscale(.3) contrast(1.05)}
+.contact{text-align:center;background:radial-gradient(circle at 50% 0,#1c1608,#0a0a0a 70%)}
+.contact h2::after{margin-inline:auto}
+.contact .sub{margin-inline:auto}
+.info{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;font-size:14.5px;color:var(--mut)}
+.info a{border:1px solid var(--line);border-radius:999px;padding:6px 16px}
+.info a:hover{border-color:var(--gold);color:var(--gold2)}
+footer{border-top:1px solid var(--line);text-align:center;padding:20px 12px;font-size:12.5px;color:#777}
+.fab{position:fixed;bottom:16px;left:16px;z-index:30;background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.5);font-size:26px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+ <a class="brand" href="#top"><i></i><span id="brandName">الإبداع الهندسي</span></a>
+ <nav><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#gallery">المعرض</a><a href="#transform">قبل وبعد</a><a href="#map">موقعنا</a></nav>
+ <a class="btn btn-gold btn-sm" data-wa="مرحباً، أريد طلب استشارة هندسية">استشارة واتساب</a>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+ <div class="logo"></div>
+ <small>حلب · سوريا · منذ 1989</small>
+ <h1>من الفكرة إلى التنفيذ<br><b>نبني الجودة ونصنع الفرق</b></h1>
+ <p>مقاولات وتشطيبات فاخرة، بتفاصيل تصنع هوية المكان.</p>
+ <div class="btns">
+  <a class="btn btn-gold" data-wa="مرحباً، أريد طلب استشارة هندسية">اطلب استشارة هندسية</a>
+  <a class="btn btn-line" href="#gallery">شاهد الأعمال</a>
+ </div>
+</div></div>
+
+<div class="wrap"><div class="stats">
+ <div class="stat"><b>1989</b><span>سنة التأسيس</span></div>
+ <div class="stat"><b>3</b><span>مجالات رئيسية</span></div>
+ <div class="stat"><b>حلب</b><span>الحمدانية</span></div>
+</div></div>
+
+<section id="about"><div class="wrap">
+ <div class="tag">من نحن</div>
+ <h2>خبرة تُبنى عليها الثقة</h2>
+ <div class="about">
+  <p>تأسست شركة الإبداع الهندسي للمقاولات عام 1989، وهي شركة رائدة في الأعمال الهندسية والإنشاءات والمقاولات والتشطيبات الداخلية والخارجية، تجمع بين الخبرة العميقة والرؤية العصرية لخدمة مشاريع متنوعة.</p>
+ </div>
+</div></section>
+
+<hr class="line">
+
+<section id="services" class="alt"><div class="wrap">
+ <div class="tag">خدماتنا</div>
+ <h2>ما نقدّمه لك</h2>
+ <p class="sub">من الخرسانة الخام إلى مساحة معيشة راقية.</p>
+ <div class="grid">
+  <div class="card"><div class="n">01</div><h3>الإنشاءات</h3><p>مشاريع سكنية وتجارية وصناعية، من الحفر والأساسات حتى الهيكل الإنشائي الكامل.</p></div>
+  <div class="card"><div class="n">02</div><h3>المقاولات</h3><p>مقاولات عامة وتنفيذ المشاريع، من التخطيط والإدارة حتى التسليم.</p></div>
+  <div class="card"><div class="n">03</div><h3>الإكساء والتشطيبات</h3><p>دهان فاخر، أرضيات رخام، عزل، وتشطيب داخلي وخارجي بإشراف دقيق.</p></div>
+  <div class="card"><div class="n">04</div><h3>التصميم الداخلي والجبس بورد</h3><p>أسقف حديثة وإضاءة ذكية، وخطوط تمنح المساحة عمقاً.</p></div>
+  <div class="card"><div class="n">05</div><h3>النجارة الفاخرة</h3><p>أبواب خشبية وأعمال نجارة بدقة عالية، وأبواب ونوافذ PVC.</p></div>
+ </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+ <div class="tag">المعرض</div>
+ <h2>لمحة من أعمالنا</h2>
+ <p class="sub">أسقف، إضاءة، أبواب وأعمال خشبية بحضور يليق بالمساحة.</p>
+ <div class="gal">
+  <div style="background-image:url(5-gallery-1.jpg)"></div>
+  <div style="background-image:url(6-gallery-2.jpg)"></div>
+  <div style="background-image:url(7-gallery-3.jpg)"></div>
+  <div style="background-image:url(8-gallery-4.jpg)"></div>
+  <div style="background-image:url(9-gallery-5.jpg)"></div>
+  <div style="background-image:url(10-gallery-6.jpg)"></div>
+  <div style="background-image:url(11-gallery-7.jpg)"></div>
+  <div style="background-image:url(12-gallery-8.jpg)"></div>
+ </div>
+ <p class="note">بعض الصور تصورات توضيحية للأسقف والأبواب والأعمال الخشبية، وليست توثيقاً لمشاريع منفذة.</p>
+</div></section>
+
+<section id="transform" class="alt"><div class="wrap">
+ <div class="tag">قبل وبعد</div>
+ <h2>التحوّل</h2>
+ <p class="sub">من سطح خام إلى تشطيب فاخر. حرّك الشريط لترى الفرق.</p>
+ <div class="ba" id="ba">
+  <div class="a"></div><div class="b" id="bBox"></div>
+  <span class="lbl l1">قبل</span><span class="lbl l2">بعد</span>
+  <div class="bar" id="bar"></div>
+  <input type="range" min="0" max="100" value="50" id="rng" aria-label="مقارنة قبل وبعد">
+ </div>
+ <p class="note">تصور توضيحي للتحوّل، وليس توثيقاً لمشروع منفذ.</p>
+</div></section>
+
+<section id="why"><div class="wrap">
+ <div class="tag">لماذا نحن</div>
+ <h2>لماذا يختارنا عملاؤنا</h2>
+ <div class="why" style="margin-top:22px">
+  <div><b>خبرة راسخة</b><span>سجل طويل في مختلف أنواع المشاريع.</span></div>
+  <div><b>فريق متخصص</b><span>مهندسون وفنيون من اختصاصات متنوعة.</span></div>
+  <div><b>حلول مبتكرة</b><span>توازن بين الكفاءة التشغيلية والتكلفة.</span></div>
+  <div><b>رقابة جودة</b><span>متابعة الجودة في كل مرحلة من مراحل التنفيذ.</span></div>
+ </div>
+</div></section>
+
+<section id="map" class="alt"><div class="wrap">
+ <div class="tag">موقعنا</div>
+ <h2>تفضّل بزيارتنا</h2>
+ <p class="sub" id="addr">حلب – الحمدانية – الحي الثالث – مقابل مدرسة ابن البيطار</p>
+ <div class="map"><iframe id="mapf" loading="lazy" title="الخريطة"></iframe></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+ <div class="tag">تواصل معنا</div>
+ <h2>شاركنا فكرتك</h2>
+ <p class="sub">شاركنا فكرتك واحتياجات مساحتك، لنتحدث عن التصميم والتشطيب المناسبين لمشروعك.</p>
+ <div class="btns">
+  <a class="btn btn-gold" data-wa="مرحباً، أريد طلب استشارة هندسية">طلب استشارة عبر واتساب</a>
+  <a class="btn btn-line" data-call>اتصل الآن</a>
+ </div>
+ <div class="info">
+  <a href="tel:+963968165284" dir="ltr">+963 968 165 284</a>
+  <a href="tel:+963988966816" dir="ltr">0988 966 816</a>
+  <a href="mailto:info@alebdaaco.com">info@alebdaaco.com</a>
+  <a href="https://www.instagram.com/alebdaaco" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://www.facebook.com/profile.php?id=61567609556946" target="_blank" rel="noopener">Facebook</a>
+ </div>
+</div></section>
+
+<footer>© الإبداع الهندسي للمقاولات · حلب<br>معاينة تصميم مقترحة وبانتظار اعتماد الشركة</footer>
+
+<a class="fab" data-wa="مرحباً، أريد الاستفسار" aria-label="واتساب">✆</a>
+
+<script>
+/* ===== إعدادات العميل ===== */
+var WA_NUMBER = "963968165284";
+var PHONES = ["0968165284","0988966816"];
+var MAP_QUERY = "الحمدانية الحي الثالث حلب سوريا";
+/* ========================= */
+document.querySelectorAll("[data-wa]").forEach(function(a){
+  a.href="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(a.getAttribute("data-wa"));
+  a.target="_blank";a.rel="noopener";
+});
+document.querySelectorAll("[data-call]").forEach(function(a){a.href="tel:+"+WA_NUMBER;});
+document.getElementById("mapf").src="https://maps.google.com/maps?q="+encodeURIComponent(MAP_QUERY)+"&z=15&hl=ar&output=embed";
+var rng=document.getElementById("rng"),bBox=document.getElementById("bBox"),bar=document.getElementById("bar");
+function mv(){var v=rng.value;bBox.style.clipPath="inset(0 0 0 "+v+"%)";bar.style.left=v+"%";}
+rng.addEventListener("input",mv);mv();
+</script>
+</body>
+</html>
